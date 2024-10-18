@@ -2,9 +2,9 @@
 
 **Documents** is a powerful **Next.js** documentation starter kit designed to simplify the process of creating high-quality, comprehensive product documentation, technical manuals and business guides. Built with **React**, **Tailwind CSS** and **TypeScript**, this starter kit provides the foundation to build your project documentation and knowledge base.
 
-**Demo**: [https://rubix-documents.vercel.app/](https://rubix-documents.vercel.app/)
+**Demo**: [https://residents-documents.vercel.app/](https://residents-documents.vercel.app/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frubixvi%2Frubix-documents&project-name=my-documents&repository-name=my-documents&demo-title=Documents&demo-description=This%20Document%20Starter%20Kit%20is%20developed%20with%20Next.js%2C%20Tailwind%20CSS%20and%20TypeScript.%20It%20serves%20as%20a%20flexible%20and%20scalable%20foundation%20for%20building%20documentation%20websites%20or%20content-driven%20projects.&demo-url=https%3A%2F%2Frubix-documents.vercel.app%2F&demo-image=https%3A%2F%2Fgithub.com%2Frubixvi%2Frubix-documents%2Fblob%2Fmain%2Fpublic%2Fscreens%2Fscreen-1.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fconorluddy%2Fresidents-documents&project-name=my-documents&repository-name=my-documents&demo-title=Documents&demo-description=This%20Document%20Starter%20Kit%20is%20developed%20with%20Next.js%2C%20Tailwind%20CSS%20and%20TypeScript.%20It%20serves%20as%20a%20flexible%20and%20scalable%20foundation%20for%20building%20documentation%20websites%20or%20content-driven%20projects.&demo-url=https%3A%2F%2Fresidents-documents.vercel.app%2F&demo-image=https%3A%2F%2Fgithub.com%2Fconorluddy%2Fresidents-documents%2Fblob%2Fmain%2Fpublic%2Fscreens%2Fscreen-1.png)
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Documentation
 
-[https://docs.rubixstudios.com.au](https://docs.rubixstudios.com.au) **(In-Development)**
+[https://docs.residents.com.au](https://docs.residents.com.au) **(In-Development)**
 
 ## Development
 
@@ -26,8 +26,8 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/rubixvi/rubix-documents.git
-    cd rubix-documents
+    git clone https://github.com/conorluddy/residents-documents.git
+    cd residents-documents
     ```
 
 2. Install dependencies:
@@ -133,8 +133,8 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ## Contact
 
-For support or inquiries, contact Vincent Vu [@rubixvi](https://x.com/rubixvi) on X.
+For support or inquiries, contact Vincent Vu [@conorluddy](https://x.com/conorluddy) on X.
 
-Rubix Studios - [https://www.rubixstudios.com.au](https://www.rubixstudios.com.au)
+Residents - [https://www.residents.com.au](https://www.residents.com.au)
 
-Project: [https://github.com/rubixvi/rubix-documents](https://github.com/rubixvi/rubix-documents)
+Project: [https://github.com/conorluddy/residents-documents](https://github.com/conorluddy/residents-documents)

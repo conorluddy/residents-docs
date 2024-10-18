@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config = {
   darkMode: ["class"],
@@ -59,8 +60,9 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        code: ["var(--font-geist-mono)"],
-        regular: ["var(--font-geist-sans)"],
+        code: "Jersey 10",
+        regular: "Jersey 10",
+        header: ["stratum-2-web", "sans-serif"], // Add this line
       },
       keyframes: {
         "accordion-down": {
@@ -78,7 +80,15 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    plugin(({ addBase, theme }) => {
+      addBase({
+        "h1, h2, h3, h4, h5": { fontFamily: theme("fontFamily.header") },
+      });
+    }),
+  ],
 } satisfies Config;
 
 export default config;

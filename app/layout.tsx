@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from "@next/third-parties/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navigation/navbar";
 import { GeistSans } from "geist/font/sans";
@@ -48,13 +48,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      { Settings.gtmconnected && (
-        <GoogleTagManager gtmId={Settings.gtm} />
-      )}
-      <body
-        className={`${GeistSans.variable} ${GeistMono.variable} font-regular`}
-        suppressHydrationWarning
-      >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/cdi3nei.css"
+        ></link>
+        {Settings.gtmconnected && <GoogleTagManager gtmId={Settings.gtm} />}
+      </head>
+      <body className={`font-jersey`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -62,12 +63,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="px-5 sm:px-8 h-auto">
-            {children}
-          </main>
+          <main className="px-5 sm:px-8 h-auto">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
+/* https://fonts.adobe.com/fonts/stratum#fonts-section */
