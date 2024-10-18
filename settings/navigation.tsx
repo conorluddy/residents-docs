@@ -7,7 +7,7 @@ export const Navigations = [
     external: false,
   },
   // {
-  //   title: "Home",
+  //   title: "Contact",
   //   href: "https://www.residents.com.au/",
   // }
 ];

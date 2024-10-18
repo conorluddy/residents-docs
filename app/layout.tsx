@@ -55,7 +55,7 @@ export default function RootLayout({
         ></link>
         {Settings.gtmconnected && <GoogleTagManager gtmId={Settings.gtm} />}
       </head>
-      <body className={`font-jersey`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
