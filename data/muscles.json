@@ -1,0 +1,74 @@
+{
+  "muscles": [
+    {
+      "name": "Biceps Brachii",
+      "group": "Arms",
+      "location": "Front of upper arm",
+      "function": "Flexion of elbow, supination of forearm",
+      "exercises": ["Bicep Curls", "Hammer Curls", "Chin-Ups"]
+    },
+    {
+      "name": "Triceps Brachii",
+      "group": "Arms",
+      "location": "Back of upper arm",
+      "function": "Extension of elbow",
+      "exercises": ["Tricep Pushdowns", "Skull Crushers", "Dips"]
+    },
+    {
+      "name": "Pectoralis Major",
+      "group": "Chest",
+      "location": "Front of chest",
+      "function": "Adduction and flexion of arm",
+      "exercises": ["Bench Press", "Push-Ups", "Chest Flyes"]
+    },
+    {
+      "name": "Latissimus Dorsi",
+      "group": "Back",
+      "location": "Large muscle of the back",
+      "function": "Adduction, extension, and internal rotation of shoulder",
+      "exercises": ["Pull-Ups", "Lat Pulldowns", "Rows"]
+    },
+    {
+      "name": "Quadriceps",
+      "group": "Legs",
+      "location": "Front of thigh",
+      "function": "Extension of knee",
+      "exercises": ["Squats", "Leg Press", "Lunges"]
+    },
+    {
+      "name": "Hamstrings",
+      "group": "Legs",
+      "location": "Back of thigh",
+      "function": "Flexion of knee, extension of hip",
+      "exercises": ["Deadlifts", "Leg Curls", "Romanian Deadlifts"]
+    },
+    {
+      "name": "Gastrocnemius",
+      "group": "Legs",
+      "location": "Back of lower leg",
+      "function": "Plantar flexion of foot",
+      "exercises": ["Calf Raises", "Jump Rope", "Leg Press (toes)"]
+    },
+    {
+      "name": "Deltoids",
+      "group": "Shoulders",
+      "location": "Cap of shoulder",
+      "function": "Abduction, flexion, and extension of arm",
+      "exercises": ["Shoulder Press", "Lateral Raises", "Front Raises"]
+    },
+    {
+      "name": "Trapezius",
+      "group": "Back",
+      "location": "Upper back and neck",
+      "function": "Elevation and rotation of scapula",
+      "exercises": ["Shrugs", "Face Pulls", "Upright Rows"]
+    },
+    {
+      "name": "Abdominals",
+      "group": "Core",
+      "location": "Front of torso",
+      "function": "Flexion and rotation of trunk",
+      "exercises": ["Crunches", "Planks", "Leg Raises"]
+    }
+  ]
+}
