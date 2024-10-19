@@ -3,24 +3,32 @@ import { Paths } from "@/lib/pageroutes";
 export const Documents: Paths[] = [
   {
     title: "Introduction",
-    href: "/introduction",
+    href: "/docs/introduction",
     heading: "Getting started",
     items: [
       {
         title: "Overview",
-        href: "/overview",
+        href: "/docs/overview",
       },
       {
         title: "Features",
-        href: "/features",
+        href: "/docs/features",
       },
       {
         title: "Stack & Dependencies",
-        href: "/stack-dependencies-prerequisites",
+        href: "/docs/stack-dependencies-prerequisites",
       },
       {
         title: "Installation",
-        href: "/installation",
+        href: "/docs/introduction/installation",
+      },
+      {
+        title: "Setup",
+        href: "/docs/introduction/setup",
+      },
+      {
+        title: "Changelog",
+        href: "/docs/introduction/changelog",
       },
     ],
   },
@@ -28,83 +36,57 @@ export const Documents: Paths[] = [
     spacer: true,
   },
   {
-    title: "Database",
-    href: "/schema",
-    items: [
-      {
-        title: "Schema",
-        href: "/schema",
-      },
-      {
-        title: "ORM",
-        href: "/swapping-databases-or-orm",
-      },
-      {
-        title: "System",
-        href: "/relational-db",
-      },
-    ],
-  },
-  {
     title: "Development",
-    href: "/development",
+    href: "/docs/development",
     items: [
-      {
-        title: "Local",
-        href: "/local",
-      },
-      {
-        title: "Docker",
-        href: "/docker",
-      },
       {
         title: "Tooling",
-        href: "/tooling",
+        href: "/docs/tooling",
       },
       {
         title: "Testing",
-        href: "/testing",
+        href: "/docs/testing",
       },
     ],
   },
   {
     title: "Authentication & Authorization",
-    href: "/rbac-authorisation-authentication",
+    href: "/docs/rbac-authorisation-authentication",
   },
   {
     title: "Deployment",
-    href: "/deployment",
+    href: "/docs/deployment",
   },
   {
     title: "Examples",
-    href: "/examples",
+    href: "/docs/examples",
   },
   {
     title: "Extending",
-    href: "/extending",
+    href: "/docs/extending",
   },
   {
     title: "Frontend",
-    href: "/front-end-components-and-examples",
+    href: "/docs/front-end-components-and-examples",
   },
   {
     title: "Customization",
-    href: "/customisation",
+    href: "/docs/customisation",
   },
   {
     title: "Troubleshooting",
-    href: "/troubleshooting",
+    href: "/docs/troubleshooting",
   },
   {
     title: "FAQ",
-    href: "/frequently-asked-questions",
+    href: "/docs/frequently-asked-questions",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/docs/contact",
   },
   {
     title: "Terms & Conditions",
-    href: "/terms-and-conditions",
+    href: "/docs/terms-and-conditions",
   },
 ];
