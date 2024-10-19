@@ -4,7 +4,7 @@ export const Documents: Paths[] = [
   {
     title: "Introduction",
     href: "/introduction",
-    heading: "Getting started",
+    heading: "HEADING",
     items: [
       {
         title: "Overview",
@@ -34,6 +34,10 @@ export const Documents: Paths[] = [
   },
   {
     spacer: true,
+  },
+  {
+    title: "Database Schema",
+    href: "/schema",
   },
   {
     title: "Development",

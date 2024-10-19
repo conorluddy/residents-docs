@@ -1,10 +1,55 @@
 ---
 title: Schema
 description: An overview of the database schema
-keywords: ["database", "schema", "users", "tokens", "relationships", "db", "meta"]
+keywords: ["database", "schema", "users", "tokens", "relationships", "db", "meta", "erd", "entity relationship diagram"]
 ---
 
 The Residents app uses a PostgreSQL database with the following main tables:
+
+
+<Mermaid chart={`erDiagram
+    USERS ||--o{ TOKENS : has
+    USERS ||--o{ FEDERATED_CREDENTIALS : has
+    USERS ||--o{ USER_META : has
+    USERS ||--o{ USERS : refers
+
+    USERS {
+        int id PK
+        string username
+        string email
+        string password
+        string firstName
+        string lastName
+        string role
+        string status
+        int score
+        int referredBy FK
+        datetime createdAt
+        datetime updatedAt
+        datetime deletedAt
+    }
+
+    TOKENS {
+        int id PK
+        int userId FK
+        string type
+        string value
+        datetime expiresAt
+        datetime createdAt
+    }
+
+    FEDERATED_CREDENTIALS {
+        int id PK
+        int userId FK
+        string provider
+        string subject
+    }
+
+    USER_META {
+        int id PK
+        int userId FK
+        string metaItem
+    }`} />
 
 ### Users Table
 This table stores the core information about each user.

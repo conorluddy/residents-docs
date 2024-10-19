@@ -17,13 +17,12 @@ export const keywords = [
 export const urlimage = "/images/og-image.png";
 export const imagealt = "Residents Documentation";
 export const twitterhandle = "@Residents";
-
 export const companyname = "Residents";
-export const companylink = "https://www.residents.com.au";
+export const companylink = "https://www.conor.fyi";
 
 export const branding = true;
 export const rightsidebar = true;
-export const feedbackedit = true;
+export const feedbackedit = false;
 export const tableofcontent = true;
 export const totopscroll = true;
 

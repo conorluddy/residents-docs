@@ -16,7 +16,7 @@ export function Navbar() {
       <div className="mx-auto flex h-full items-center justify-between p-1 sm:p-3 md:gap-2">
         <div className="flex items-center gap-5">
           <SheetLeft />
-          <div className="flex items-center gap-[155px]">
+          <div className="flex items-center">
             <div className="hidden md:flex mr-6">
               <Logo />
             </div>
