@@ -4,33 +4,31 @@ export const Documents: Paths[] = [
   {
     title: "Introduction",
     href: "/introduction",
-    heading: "HEADING",
-    items: [
-      {
-        title: "Overview",
-        href: "/overview",
-      },
-      {
-        title: "Features",
-        href: "/features",
-      },
-      {
-        title: "Stack & Dependencies",
-        href: "/stack-dependencies-prerequisites",
-      },
-      {
-        title: "Installation",
-        href: "/installation",
-      },
-      {
-        title: "Setup",
-        href: "/setup",
-      },
-      {
-        title: "Changelog",
-        href: "/changelog",
-      },
-    ],
+    // heading: "Introduction",
+  },
+  {
+    title: "Overview",
+    href: "/overview",
+  },
+  {
+    title: "Features",
+    href: "/features",
+  },
+  {
+    title: "Stack & Dependencies",
+    href: "/stack-dependencies-prerequisites",
+  },
+  {
+    title: "Installation",
+    href: "/installation",
+  },
+  {
+    title: "Setup",
+    href: "/setup",
+  },
+  {
+    title: "Changelog",
+    href: "/changelog",
   },
   {
     spacer: true,
@@ -42,16 +40,14 @@ export const Documents: Paths[] = [
   {
     title: "Development",
     href: "/development",
-    items: [
-      {
-        title: "Tooling",
-        href: "/tooling",
-      },
-      {
-        title: "Testing",
-        href: "/testing",
-      },
-    ],
+  },
+  {
+    title: "Tooling",
+    href: "/tooling",
+  },
+  {
+    title: "Testing",
+    href: "/testing",
   },
   {
     title: "Authentication & Authorization",
