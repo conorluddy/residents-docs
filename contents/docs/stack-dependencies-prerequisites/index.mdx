@@ -4,6 +4,28 @@ description: Overview of the technology stack, dependencies, and prerequisites f
 keywords: ["stack", "dependencies", "prerequisites", "requirements"]
 ---
 
-# Stack Dependencies and Prerequisites
-
 This section outlines the technology stack, dependencies, and prerequisites required for setting up and running our project.
+
+Before setting up and running the Residents app, ensure you have the following prerequisites installed and configured:
+
+1. **Node.js**: The application is built with Node.js. Make sure you have Node.js installed (version 18.x or later recommended).
+
+2. **PostgreSQL**: A PostgreSQL database is required. Ensure you have PostgreSQL installed and running, or access to a PostgreSQL instance.
+
+3. **npm**: The Node.js package manager is used for managing dependencies. It's typically installed with Node.js.
+
+4. **Docker** (optional): Docker is used for containerization. If you plan to use the Docker setup, make sure Docker is installed on your system.
+
+5. **SendGrid Account**: For email functionality (e.g., password reset), you'll need a SendGrid account and API key.
+
+6. **Google Developer Account** (optional): If you want to use Google authentication, you'll need a Google Developer account and API credentials.
+
+7. **Environment Variables**: The app uses various environment variables for configuration. Make sure to set up your `.env` file based on the provided `.env.example`.
+
+8. **TypeScript**: The project is written in TypeScript. While not necessary for running the app, it's required for development.
+
+9. **Git**: Version control is managed with Git. Ensure you have Git installed if you plan to clone or contribute to the repository.
+
+Before running the app, make sure to install the required npm packages by running:
+
+npm install

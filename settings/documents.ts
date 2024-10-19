@@ -20,15 +20,15 @@ export const Documents: Paths[] = [
       },
       {
         title: "Installation",
-        href: "/introduction/installation",
+        href: "/installation",
       },
       {
         title: "Setup",
-        href: "/introduction/setup",
+        href: "/setup",
       },
       {
         title: "Changelog",
-        href: "/introduction/changelog",
+        href: "/changelog",
       },
     ],
   },

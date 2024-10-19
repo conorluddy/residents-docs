@@ -1,5 +1,54 @@
 ---
-title: Placeholder
-description: Placeholder description
-keywords: ["placeholder"]
+title: Schema
+description: An overview of the database schema
+keywords: ["database", "schema", "users", "tokens", "relationships", "db", "meta"]
 ---
+
+The Residents app uses a PostgreSQL database with the following main tables:
+
+### Users Table
+This table stores the core information about each user.
+
+- **id**: A unique identifier for each user.
+- **username**: The user's chosen username.
+- **email**: The user's email address.
+- **password**: A hashed version of the user's password.
+- **firstName**: The user's first name.
+- **lastName**: The user's last name.
+- **role**: The user's role in the system (e.g., user, admin, moderator).
+- **status**: The current status of the user account (e.g., active, suspended).
+- **score**: A numerical score associated with the user (purpose may vary).
+- **referredBy**: ID of the user who referred this user (if applicable).
+- **createdAt**: Timestamp of when the user account was created.
+- **updatedAt**: Timestamp of the last update to the user account.
+- **deletedAt**: Timestamp of when the user was soft-deleted (if applicable).
+
+### Tokens Table
+This table manages various types of tokens used for authentication and account management.
+
+- **id**: A unique identifier for each token.
+- **userId**: The ID of the user this token belongs to.
+- **type**: The type of token (e.g., refresh, password reset, account validation).
+- **value**: The actual token value.
+- **expiresAt**: When this token expires.
+- **createdAt**: When this token was created.
+
+### Federated Credentials Table
+This table stores information about users who sign in using third-party authentication (like Google).
+
+- **id**: A unique identifier for each credential entry.
+- **userId**: The ID of the user these credentials belong to.
+- **provider**: The name of the authentication provider (e.g., "google").
+- **subject**: A unique identifier for the user from the provider's system.
+
+### User Meta Table
+This table allows for storing additional, flexible metadata about users.
+
+- **id**: A unique identifier for each meta item.
+- **userId**: The ID of the user this meta data belongs to.
+- **metaItem**: A placeholder for various pieces of additional user data.
+
+### Relationships
+- Each user can have multiple tokens, federated credentials, and meta items.
+- Tokens, federated credentials, and user meta items are all linked to a specific user through the `userId` field.
+
