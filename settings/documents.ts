@@ -3,32 +3,32 @@ import { Paths } from "@/lib/pageroutes";
 export const Documents: Paths[] = [
   {
     title: "Introduction",
-    href: "/docs/introduction",
+    href: "/introduction",
     heading: "Getting started",
     items: [
       {
         title: "Overview",
-        href: "/docs/overview",
+        href: "/overview",
       },
       {
         title: "Features",
-        href: "/docs/features",
+        href: "/features",
       },
       {
         title: "Stack & Dependencies",
-        href: "/docs/stack-dependencies-prerequisites",
+        href: "/stack-dependencies-prerequisites",
       },
       {
         title: "Installation",
-        href: "/docs/introduction/installation",
+        href: "/introduction/installation",
       },
       {
         title: "Setup",
-        href: "/docs/introduction/setup",
+        href: "/introduction/setup",
       },
       {
         title: "Changelog",
-        href: "/docs/introduction/changelog",
+        href: "/introduction/changelog",
       },
     ],
   },
@@ -37,56 +37,56 @@ export const Documents: Paths[] = [
   },
   {
     title: "Development",
-    href: "/docs/development",
+    href: "/development",
     items: [
       {
         title: "Tooling",
-        href: "/docs/tooling",
+        href: "/tooling",
       },
       {
         title: "Testing",
-        href: "/docs/testing",
+        href: "/testing",
       },
     ],
   },
   {
     title: "Authentication & Authorization",
-    href: "/docs/rbac-authorisation-authentication",
+    href: "/rbac-authorisation-authentication",
   },
   {
     title: "Deployment",
-    href: "/docs/deployment",
+    href: "/deployment",
   },
   {
     title: "Examples",
-    href: "/docs/examples",
+    href: "/examples",
   },
   {
     title: "Extending",
-    href: "/docs/extending",
+    href: "/extending",
   },
   {
     title: "Frontend",
-    href: "/docs/front-end-components-and-examples",
+    href: "/front-end-components-and-examples",
   },
   {
     title: "Customization",
-    href: "/docs/customisation",
+    href: "/customisation",
   },
   {
     title: "Troubleshooting",
-    href: "/docs/troubleshooting",
+    href: "/troubleshooting",
   },
   {
     title: "FAQ",
-    href: "/docs/frequently-asked-questions",
+    href: "/frequently-asked-questions",
   },
   {
     title: "Contact",
-    href: "/docs/contact",
+    href: "/contact",
   },
   {
     title: "Terms & Conditions",
-    href: "/docs/terms-and-conditions",
+    href: "/terms-and-conditions",
   },
 ];
