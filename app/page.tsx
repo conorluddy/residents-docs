@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { PageRoutes } from "@/lib/pageroutes";
+import Mermaid from "mermaid";
 
 export default function Home() {
   return (

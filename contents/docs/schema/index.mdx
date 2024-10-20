@@ -4,38 +4,40 @@ description: An overview of the database schema
 keywords: ["database", "schema", "users", "tokens", "relationships", "db", "meta", "erd", "entity relationship diagram"]
 ---
 
-The Residents app uses a PostgreSQL database with the following main tables:
 
-
-<Mermaid chart={`erDiagram
+<Mermaid className={'-ml-96'} chart={`
+%%{init: {
+  'theme': 'forest',
+  'er': {'layoutDirection': 'LR'}
+}}%%
+erDiagram
     USERS ||--o{ TOKENS : has
     USERS ||--o{ FEDERATED_CREDENTIALS : has
-    USERS ||--o{ USER_META : has
-    USERS ||--o{ USERS : refers
+    USERS ||--|| USER_META : has
+    USERS ||--|| ROLE : has
+    USERS ||--|| STATUS : has
+    TOKENS ||--|| TOKEN_TYPE : has
 
     USERS {
         int id PK
         string username
-        string email
-        string password
         string firstName
         string lastName
-        string role
-        string status
-        int score
-        int referredBy FK
+        string email
+        string password
         datetime createdAt
-        datetime updatedAt
         datetime deletedAt
+        enum status
+        enum role
     }
 
     TOKENS {
-        int id PK
-        int userId FK
-        string type
-        string value
+        string id PK
+        string userId FK
+        enum type
+        boolean used
         datetime expiresAt
-        datetime createdAt
+        datetime createdAt        
     }
 
     FEDERATED_CREDENTIALS {
@@ -49,10 +51,46 @@ The Residents app uses a PostgreSQL database with the following main tables:
         int id PK
         int userId FK
         string metaItem
-    }`} />
+    }
+
+    %% Enums
+    
+    ROLE_ENUM {
+        string OWNER
+        string ADMIN
+        string MODERATOR
+        string DEFAULT
+        string LOCKED
+    }
+    ROLE ||--o{ ROLE_ENUM : contains
+    
+    STATUS_ENUM {
+        string BANNED
+        string DELETED
+        string PENDING
+        string REJECTED
+        string SUSPENDED
+        string UNVERIFIED
+        string VERIFIED
+    }
+    STATUS ||--o{ STATUS_ENUM : contains
+
+    TOKEN_TYPE_ENUM {
+        string REFRESH
+        string MAGIC
+        string RESET
+        string VALIDATE
+    }
+    TOKEN_TYPE ||--o{ TOKEN_TYPE_ENUM : contains
+    `} 
+    />
+
+
+
+
 
 ### Users Table
-This table stores the core information about each user.
+This table stores the core information about each user. Columns for the Users table are kept down to the bare necessities needed for authentication, authorisation, and role based access control.
 
 - **id**: A unique identifier for each user.
 - **username**: The user's chosen username.
@@ -62,14 +100,18 @@ This table stores the core information about each user.
 - **lastName**: The user's last name.
 - **role**: The user's role in the system (e.g., user, admin, moderator).
 - **status**: The current status of the user account (e.g., active, suspended).
-- **score**: A numerical score associated with the user (purpose may vary).
-- **referredBy**: ID of the user who referred this user (if applicable).
 - **createdAt**: Timestamp of when the user account was created.
-- **updatedAt**: Timestamp of the last update to the user account.
 - **deletedAt**: Timestamp of when the user was soft-deleted (if applicable).
 
+### User Meta Table
+This table allows for storing additional, flexible metadata about users. When a user is created, a row in the **UserMeta** table is also created. The UserMeta table is intended to be used for whatever other data a user might hold, like a reddit-type score, or basic user settings, or whatever you like. It's up to you to choose what you might want to use it for, or if you want to use it at all.
+
+- **id**: A unique identifier for each meta item.
+- **userId**: The ID of the user this meta data belongs to.
+- **metaItem**: A placeholder for various pieces of additional user data.
+
 ### Tokens Table
-This table manages various types of tokens used for authentication and account management.
+The **Tokens** table will store four types of tokens: refresh (session/JWT refresh), magic (login via "magic" link), reset (reset your password) and validate (validate the user account).  **Magic**, **Reset** and **Validate** tokens will be sent in emails to the user, where they'll link back to the relevant endpoints and carry out the action if they're valid. **Refresh** tokens are used to generate a fresh JWT when the current one expires, and will be stored in a secure cookie in the client. Expired tokens can be erased in one transaction via a cleanup endpoint, or erased once used if preferred.
 
 - **id**: A unique identifier for each token.
 - **userId**: The ID of the user this token belongs to.
@@ -79,19 +121,13 @@ This table manages various types of tokens used for authentication and account m
 - **createdAt**: When this token was created.
 
 ### Federated Credentials Table
-This table stores information about users who sign in using third-party authentication (like Google).
+This table stores information about users who sign in using third-party authentication (Google etc). 
 
 - **id**: A unique identifier for each credential entry.
 - **userId**: The ID of the user these credentials belong to.
 - **provider**: The name of the authentication provider (e.g., "google").
 - **subject**: A unique identifier for the user from the provider's system.
 
-### User Meta Table
-This table allows for storing additional, flexible metadata about users.
-
-- **id**: A unique identifier for each meta item.
-- **userId**: The ID of the user this meta data belongs to.
-- **metaItem**: A placeholder for various pieces of additional user data.
 
 ### Relationships
 - Each user can have multiple tokens, federated credentials, and meta items.
