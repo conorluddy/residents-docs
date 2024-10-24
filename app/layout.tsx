@@ -1,12 +1,18 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/next-script-for-ga */
 import type { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navigation/navbar";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
 import { Footer } from "@/components/navigation/footer";
 import { Settings } from "@/lib/meta";
 import "./globals.css";
+
+declare global {
+  interface window {
+    dataLayer: any[];
+  }
+}
 
 const baseUrl = Settings.metadataBase;
 
@@ -49,14 +55,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJECV8B3GN"></script>
+        {/* // eslint-disable-next-line @next/next/next-script-for-ga */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-VJECV8B3GN"
+        ></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-VJECV8B3GN');
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {window.dataLayer?.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-VJECV8B3GN');
         </script>
         <link
           rel="stylesheet"
