@@ -60,11 +60,17 @@ export default function RootLayout({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-VJECV8B3GN"
         ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {window.dataLayer?.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-VJECV8B3GN');
-        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            if (window) {
+              window.dataLayer = window.dataLayer || []; 
+              function gtag() {window.dataLayer.push(arguments)}
+              gtag('js', new Date()); gtag('config', 'G-VJECV8B3GN');
+            }
+          `,
+          }}
+        ></script>
         <link
           rel="stylesheet"
           href="https://use.typekit.net/cdi3nei.css"
