@@ -7,16 +7,19 @@ import Mermaid from "mermaid";
 export default function Home() {
   return (
     <div className="min-h-[86.5vh] flex flex-col justify-center items-center text-center px-2 py-8">
-      <h1 className="text-4xl mb-4 sm:text-7xl flex">
+      <div className="flex text-4xl sm:text-7xl mb-6 flex-col items-center // md:flex-row md:items-baseline">
         <Image
           src="/logo.svg"
           alt="Residents Logo"
-          width={51}
-          height={51}
-          className="mt-2"
+          className="mb-2 w-20 md:w-14 relative md:top-1 md:-left-2"
+          width={300}
+          height={300}
+          sizes="100%"
         />
-        Residen<b className="text-lime-400">ts</b>
-      </h1>
+        <h1 className="text-6xl sm:text-7xl">
+          Residen<b className="text-lime-400">ts</b>
+        </h1>
+      </div>
       <p className="max-w-[600px] text-foreground mb-8 sm:text-base">
         Open source Express 5 boilerplate with a simple Postgres database. Takes
         care of your application residents with user creation, authorisation,
