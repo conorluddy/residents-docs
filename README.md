@@ -2,9 +2,9 @@
 
 **Documents** is a powerful **Next.js** documentation starter kit designed to simplify the process of creating high-quality, comprehensive product documentation, technical manuals and business guides. Built with **React**, **Tailwind CSS** and **TypeScript**, this starter kit provides the foundation to build your project documentation and knowledge base.
 
-**Demo**: [https://residents-documents.vercel.app/](https://residents-documents.vercel.app/)
+**Demo**: [https://residents.rest/](https://residents.rest/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fconorluddy%2Fresidents-documents&project-name=my-documents&repository-name=my-documents&demo-title=Documents&demo-description=This%20Document%20Starter%20Kit%20is%20developed%20with%20Next.js%2C%20Tailwind%20CSS%20and%20TypeScript.%20It%20serves%20as%20a%20flexible%20and%20scalable%20foundation%20for%20building%20documentation%20websites%20or%20content-driven%20projects.&demo-url=https%3A%2F%2Fresidents-documents.vercel.app%2F&demo-image=https%3A%2F%2Fgithub.com%2Fconorluddy%2Fresidents-documents%2Fblob%2Fmain%2Fpublic%2Fscreens%2Fscreen-1.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fconorluddy%2Fresidents-documents&project-name=my-documents&repository-name=my-documents&demo-title=Documents&demo-description=This%20Document%20Starter%20Kit%20is%20developed%20with%20Next.js%2C%20Tailwind%20CSS%20and%20TypeScript.%20It%20serves%20as%20a%20flexible%20and%20scalable%20foundation%20for%20building%20documentation%20websites%20or%20content-driven%20projects.&demo-url=https%3A%2F%2Fresidents.rest%2F&demo-image=https%3A%2F%2Fgithub.com%2Fconorluddy%2Fresidents-documents%2Fblob%2Fmain%2Fpublic%2Fscreens%2Fscreen-1.png)
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Documentation
 
-[https://docs.residents.com.au](https://docs.residents.com.au) **(In-Development)**
+[https://www.residents.rest](https://www.residents.rest) **(In-Development)**
 
 ## Development
 
@@ -25,22 +25,22 @@
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/conorluddy/residents-documents.git
-    cd residents-documents
-    ```
+   ```bash
+   git clone https://github.com/conorluddy/residents-documents.git
+   cd residents-documents
+   ```
 
 2. Install dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. Run the development server:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the project.
 
@@ -67,22 +67,22 @@
 This kit can be used to create product documentation, business websites and guides.
 
 ![Main Screen](./public/screens/screen-1.png)
-*Main Screen*
+_Main Screen_
 
 ![Document Screen](./public/screens/screen-2.png)
-*Document Screen*
+_Document Screen_
 
 ![Document Footer](./public/screens/screen-3.png)
-*Document Footer*
+_Document Footer_
 
 ![Document Search](./public/screens/screen-4.png)
-*Document Search*
+_Document Search_
 
 ![Main Dark Screen](./public/screens/screen-5.png)
-*Main Dark Mode Screen*
+_Main Dark Mode Screen_
 
 ![Document Dark Screen](./public/screens/screen-6.png)
-*Document Dark Mode Screen*
+_Document Dark Mode Screen_
 
 ## Features
 
@@ -135,6 +135,6 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 For support or inquiries, contact Vincent Vu [@conorluddy](https://x.com/conorluddy) on X.
 
-Residents - [https://www.residents.com.au](https://www.residents.com.au)
+Residents - [https://www.residents.rest](https://www.residents.rest)
 
 Project: [https://github.com/conorluddy/residents-documents](https://github.com/conorluddy/residents-documents)

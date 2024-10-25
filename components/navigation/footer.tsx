@@ -17,7 +17,7 @@ export function Footer() {
           <div className="text-center hidden md:block">
             <Link
               className="font-semibold"
-              href="https://www.residents.com.au"
+              href="https://www.residents.rest"
               target="_blank"
               rel="noopener noreferrer"
             >

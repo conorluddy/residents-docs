@@ -1,4 +1,4 @@
-export const url = "https://residents-documents.vercel.app";
+export const url = "https://www.residents.rest";
 export const siteicon = "/icon.png";
 
 export const gtm = "GTM-XXXXXXX";
