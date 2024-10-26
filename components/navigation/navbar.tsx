@@ -12,7 +12,7 @@ import { SheetClose } from "@/components/ui/sheet";
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 w-full h-16 border-b backdrop-filter backdrop-blur-xl bg-opacity-5 md:px-4 px-2">
+    <nav className="sticky top-0 z-50 w-full h-16 border-b backdrop-filter backdrop-blur-sm bg-opacity-5 md:px-4 px-2">
       <div className="mx-auto flex h-full items-center justify-between p-1 sm:p-3 md:gap-2">
         <div className="flex items-center gap-5">
           <SheetLeft />

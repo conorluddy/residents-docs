@@ -3,10 +3,11 @@ import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { PageRoutes } from "@/lib/pageroutes";
 import Mermaid from "mermaid";
+import { IdCard } from "@/components/ui/id-card";
 
 export default function Home() {
   return (
-    <div className="min-h-[86.5vh] flex flex-col justify-center items-center text-center px-2 py-8">
+    <div className="min-h-[86.5vh] flex flex-col justify-center items-center text-center px-2 py-8 relative">
       <div className="flex text-4xl sm:text-7xl mb-6 flex-col items-center // md:flex-row md:items-baseline">
         <Image
           src="/logo.svg"

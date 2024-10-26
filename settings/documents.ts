@@ -4,13 +4,13 @@ export const Documents: Paths[] = [
   {
     title: "Introduction",
     href: "/introduction",
-    heading: "Documentation is a WIP",
+    // heading: "Documentation is a WIP",
     // heading: "Introduction",
   },
-  // {
-  //   title: "Overview",
-  //   href: "/overview",
-  // },
+  {
+    title: "Quick start",
+    href: "/quick-start",
+  },
   // {
   //   title: "Features",
   //   href: "/features",
