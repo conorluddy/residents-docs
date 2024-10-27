@@ -1,5 +1,5 @@
 ---
-title: Quick start [WIP]
+title: Quick start
 description: Get stuck in!
 keywords: ["installation", "quick start", "start"]
 ---
@@ -40,35 +40,113 @@ There are several ways that you can use this repo. Pick your poison.
 
 ## Git Clone
 
-Clone the repo to your preferred location with 
+If the steps below look like too much effort, the TL;DR is: Have Node and Postgres installed -> clone the repo -> npm install the dependencies -> set the db .env variables -> init the db -> run the app.
 
+<Step>
+<StepItem title="Clone the Repository">
 ```bash
 git clone git@github.com:conorluddy/Residents.git
 ```
-
-cd into the directory
-
+</StepItem>
+<StepItem title="Jump into the working directory">
 ```bash
 cd residents
 ```
-
-Install the dependencies
-
+</StepItem>
+<StepItem title="Install the dependencies">
 ```bash
 npm install
 ```
+</StepItem>
+<StepItem title="Copy the example env file">
+```bash
+cp .env.example .env
+```
+You'll need to go through and fill that out with your own configuration, but to get this running you just need the Postgres connection details for now.
+</StepItem>
+<StepItem title="Set up prerequisites">
+Residents is a database backed Express application, so it depends on Node and a Postgres database. It will run well on any Node version from 18 onwards. If you don't like Postgres it should be pretty easy to swap that out with your preferred SQL flavour too. We use [Drizzle ORM](https://orm.drizzle.team) here, which supports a bunch of databases.
 
-
-There are a few basic requirements you'll need to get this up and running.
-
+If you don't have Node installed you can [download it from here](https://nodejs.org/en/download/package-manager). Bun is probably an option too - haven't tried it though.
+</StepItem>
+<StepItem title="Set up Postgres">
+If you don't have Postgres, you can also [get it here](https://www.postgresql.org/download/). You'll need to get that running locally and then set up your .env with the correct details.
+</StepItem>
+<StepItem title="Docker (alternative) option">
+Alternatively you can run everything on Docker if you prefer a containerized approach. You can [download that here](https://www.docker.com/products/docker-desktop/) if you need to, and then kick it off with:
+```bash
+docker-compose up -d
+```
+Spinning up the Residents Docker environment will run both a database and the Residents app in containers. When you want to start coding, you can kill the app container and keep the Postgres container running, and point your local development environment at it with your .env variables.
+</StepItem>
+<StepItem title="Prepare the database tables">
+```bash
+npm run push
+```
+</StepItem>
+<StepItem title="Insert the first user [Optional]">
+There are some SEEDED_OWNER values in the .env - running this will insert that user into the database and will only work if there are no users in there already.
+```bash
+npm run seed:owner
+```
+</StepItem>
+<StepItem title="Run the dev environment">
+```bash
+npm run dev
+```
+</StepItem>
+<StepItem title="Play around and start extending">
+If you use Postman, there's a Postman collection in the ./postman directory - you can import that whole into Postman and it will give you a collection of requests that you can use to test out the API. There should also be Swagger docs available at /api-docs
+</StepItem>
+</Step>
 
 ## Git Template
-
 Pre-configured project structures that can be easily cloned and customized. Not much different from cloning. Once you copy the template to your own repository just follow the same instructions as the git clone, but from your repo.
 
 
 ## NPM install
-A full Express app as a module. Drop Residents into an existing Express app to add user and auth routes.
+
+
+A full Express app as a module. Drop Residents into an existing Express app to add user and auth routes. 
+
+```bash
+npm install residents --save
+```
+
+Because of Express modular nature, you can actually just use Residents like this and it will add our /auth and /user routes to an existing Express application.
+
+```ts
+import express from 'express'
+import residents from 'residents'
+
+const app = express()
+
+app.use(residents) // Use Residents like any other middleware
+
+app.use('/yourstuff', yourStuffRouter)
+
+const server = app.listen(3000, () => {
+  console.info('Server is Running.')
+})
+```
+
+You'll need to have the same .env variables hooked up for Residents to be able to communicate with the database, and will need to prep the DB with the same commands as we use if you're working directly in the repo, e.g.
+
+```bash
+npm run push
+```
+
+
+We also expose some other useful bits from Residents to make it useful for quickly spinning up apps. Things you can import and use include:
+
+- Postgres DB client instance
+- Drizzle DB client instance
+- Authentication middleware
+- Types
+- Config
+- UI strings 
+
+These exports mean you can just piggyback on the functionality of Residents and apply the auth middleware to any of your own routes, quickly build Drizzle queries using the existing DB client, etc etc.
 
 
 ## NPX CLI tool
