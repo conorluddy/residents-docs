@@ -4,17 +4,11 @@ export const Documents: Paths[] = [
   {
     title: "Introduction",
     href: "/introduction",
-    // heading: "Documentation is a WIP",
-    // heading: "Introduction",
   },
   {
     title: "Quick start",
     href: "/quick-start",
   },
-  // {
-  //   title: "Features",
-  //   href: "/features",
-  // },
   {
     title: "Dependencies",
     href: "/dependencies",
@@ -23,6 +17,18 @@ export const Documents: Paths[] = [
     title: "Installation",
     href: "/installation",
   },
+  {
+    spacer: true,
+  },
+  {
+    title: "Database Schema",
+    href: "/schema",
+  },
+
+  // {
+  //   title: "Features",
+  //   href: "/features",
+  // },
   // {
   //   title: "Setup",
   //   href: "/setup",
@@ -31,13 +37,6 @@ export const Documents: Paths[] = [
   //   title: "Changelog",
   //   href: "/changelog",
   // },
-  {
-    spacer: true,
-  },
-  {
-    title: "Database Schema",
-    href: "/schema",
-  },
 
   // {
   //   title: "Tooling",

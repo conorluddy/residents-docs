@@ -2,14 +2,13 @@ import { PageRoutes } from "@/lib/pageroutes";
 
 export const Navigations = [
   {
-    title: "Docs",
-    href: `/docs${PageRoutes[0].href}`,
-    external: false,
+    title: "Introduction",
+    href: "/docs/introduction",
   },
-  // {
-  //   title: "Contact",
-  //   href: "https://www.residents.rest/",
-  // }
+  {
+    title: "Quick start",
+    href: "/docs/quick-start",
+  },
 ];
 
 export const GitHubLink = {
