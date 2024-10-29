@@ -18,13 +18,13 @@ export const Documents: Paths[] = [
     href: "/installation",
   },
   {
-    spacer: true,
-  },
-  {
     title: "Database Schema",
     href: "/schema",
   },
 
+  // {
+  //   spacer: true,
+  // },
   // {
   //   title: "Features",
   //   href: "/features",

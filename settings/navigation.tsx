@@ -2,13 +2,8 @@ import { PageRoutes } from "@/lib/pageroutes";
 
 export const Navigations = [
   {
-    title: "Introduction",
+    title: "Documentation",
     href: "/docs/introduction",
-    external: false,
-  },
-  {
-    title: "Quick start",
-    href: "/docs/quick-start",
     external: false,
   },
   {

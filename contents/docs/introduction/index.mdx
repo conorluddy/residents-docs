@@ -4,9 +4,71 @@ description: Welcome, Resident.
 keywords: ["introduction", "guide", "nextjs", "documents"]
 ---
 
-Residents is a robust, TypeScript-based backend API designed to serve as a solid foundation for building user-centric applications. Born out of the need for a reusable, secure, and feature-rich starting point, this project focuses on providing essential user management, authentication, and authorization functionalities. With a strong emphasis on developer experience, code quality, and best practices, Residents aims to streamline the development process for various applications requiring user accounts and access control.
 
-The core strengths of this project lie in its comprehensive user management system, flexible authentication options (including social logins), and a well-structured codebase with high type coverage. Built on modern technologies like Express, PostgreSQL, and Drizzle ORM, Residents prioritizes security, scalability, and ease of extension. Whether you're building a small project or laying the groundwork for a larger application, Residents provides the essential backend infrastructure to get you started quickly and securely.
+
+
+<div className='max-w-lg'>
+Residents is a robust, TypeScript-based backend API designed to serve as a solid foundation for building user-centric applications. 
+Built out of the need for a reusable, secure, and feature-rich starting point, this project focuses on providing essential user management, authentication, and authorization functionalities. 
+With an emphasis on developer experience, code quality, and best practices, Residents aims to streamline the development process for various applications requiring user accounts and access control.
+
+The strengths of this project lie in its comprehensive user management system, flexible authentication options (including social logins), and a well-structured codebase with high type coverage. Built on modern technologies like Express, PostgreSQL, and Drizzle ORM, Residents prioritizes security, scalability, and ease of extension. Whether you're building a small project or laying the groundwork for a larger application, Residents provides the essential backend infrastructure to get you started quickly and securely.
+</div>
+
+## Core Features
+
+<CardGrid>
+    <Card subtitle="API" title="Rich User Management API" description="
+Residents provides endpoints for creating, reading, updating, and deleting users. It runs on Express 5, the latest release of the industry standard API library.
+    " />
+
+    <Card subtitle="API" title="JWT Authentication" description="
+Authentication functionality via JSON web tokens (JWT), refresh tokens, password reset, magic log-in and account validation.
+    " />
+
+    <Card subtitle="RBAC" title="Role Based Access Control" description="
+Out of the box, users have 5 levels of roles, configurable with an Access Control List (ACL). This allows you to set different access for different users.
+    " />
+
+    <Card subtitle="Robust" title="Typescript and Testing" description="
+The code has a high level of test coverage, and is fully typed with Typescript. This sets strong patterns in place for further extension, and confidence for making changes.
+    " />
+
+    <Card subtitle="Email" title="Email" description="
+Sends invite, reset password and account validation email. Uses Sendgrid but will be updated soon to make configurable. Modular and easy to swap out.
+    " />
+
+    <Card subtitle="Usability" title="NPM, Github, Docker..." description="
+Residents can be installed and used as an black-box NPM package, cloned and customised as much as you like, or run in containers.
+    " />
+</CardGrid>
+
+
+## DX: Developer Experience 
+
+<CardGrid>
+
+    <Card subtitle="Tooling" title="Postman Collection" description="
+Provides a library of sample requests to run against your own instance of Residents. Great for experimenting with the setup.
+    " />
+
+    <Card subtitle="Documentation" title="Swagger" description="
+The API is documented with Swagger and serves Swagger docs and an OpenAPI JSON endpoint when running. 
+    " />
+
+    <Card subtitle="Types" title="Fully Typescript typed repo" description="
+The type coverage for the repo is at 98%, providing type safety, autocompletion and confidence when working with it.
+    " />
+
+    <Card subtitle="Modules" title="Modular code structure" description="
+Everything is modular. We have separation of Routes, Middlewares, Controllers and Services, making it easy to add your own and reuse everything that already exists.
+    " />
+
+</CardGrid>
+
+
+
+
 
 
 

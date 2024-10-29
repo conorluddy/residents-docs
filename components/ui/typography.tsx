@@ -1,8 +1,12 @@
 import { PropsWithChildren } from "react";
 
-export function Typography({ children }: PropsWithChildren) {
+interface Props extends PropsWithChildren {
+  contain?: boolean;
+}
+
+export function Typography({ children, contain }: Props) {
   return (
-    <div className="typography">
+    <div className={`typography ${contain ? "max-w-xl mx-auto" : ""}`}>
       {children}
     </div>
   );
