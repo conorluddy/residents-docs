@@ -1,6 +1,7 @@
 import { ReleaseItem, ReleaseStep } from "@/components/markup/releases";
 import { Button } from "@/components/ui/button";
 import { format, formatDistanceToNow } from "date-fns";
+import { Metadata } from "next";
 
 // Define types
 type Release = {
@@ -12,6 +13,10 @@ type Release = {
   html_url: string;
   zipball_url: string;
   tarball_url: string;
+};
+
+type PageProps = {
+  params: { slug: string[] };
 };
 
 // Revalidate every hour
@@ -106,4 +111,11 @@ export default async function ReleasesPage() {
       </div>
     </div>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: `Releases`,
+    description: "View the latest releases and updates for Residents.",
+  };
 }
