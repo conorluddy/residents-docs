@@ -30,7 +30,7 @@ export default function Home() {
       </p>
       <div className="flex items-center gap-5">
         <Link
-          href={`/docs${PageRoutes[0].href}`}
+          href={PageRoutes[0].href}
           className={buttonVariants({ className: "px-6", size: "lg" })}
         >
           Lets go
